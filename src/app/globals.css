@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .singleCardPost {
+    @apply bg-red-200 rounded min-h-[300px] text-center p-3;
+  }
+  .btnMore {
+    @apply w-1/5  rounded min-h-[35px] text-center border-2 border-red-700 border-solid border-opacity-70 mt-6 shadow-md;
+  }
+  .btnMore:hover {
+    @apply bg-red-500 shadow-xl scale-[1.1] ;
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "imageUrl":"/img/graph.png",
+        "title": "First post",
+        "body": "This is the first post on the blog. one"
+      },
+      {
+        "id": 2,
+        "imageUrl":"/img/graph.png",
+        "title": "Second post",
+        "body": "This is the second post on the blog. two"
+      },
+      {
+        "id": 3,
+        "imageUrl":"/img/graph.png",
+        "title": "Third post",
+        "body": "This is the third post on the blog. three"
+      },
+      {
+        "id": 4,
+        "imageUrl":"/img/graph.png",
+        "title": "four post",
+        "body": "This is the first post on the blog. four"
+      },
+      {
+        "id": 5,
+        "imageUrl":"/img/graph.png",
+        "title": "five post",
+        "body": "This is the second post on the blog. five"
+      },
+      {
+        "id": 6,
+        "imageUrl":"/img/graph.png",
+        "title": "six post",
+        "body": "This is the third post on the blog. six"
+      },
+      {
+        "id": 7,
+        "imageUrl":"/img/graph.png",
+        "title": "seven post",
+        "body": "This is the first post on the blog. seven"
+      },
+      {
+        "id": 8,
+        "imageUrl":"/img/graph.png",
+        "title": "eight post",
+        "body": "This is the second post on the blog. eight"
+      },
+      {
+        "id": 9,
+        "imageUrl":"/img/graph.png",
+        "title": "nine post",
+        "body": "This is the third post on the blog. nine"
+      }
+    ]
+  }
