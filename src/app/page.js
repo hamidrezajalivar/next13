@@ -5,7 +5,6 @@ import CardBlog from "../../components/CardBlog";
 import axios from "axios";
 import Link from "next/link";
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 const Home = async () => {
   const postsData = await fecthPosts();
   return (
