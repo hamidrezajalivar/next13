@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.13.5",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "eslint": "8.41.0",

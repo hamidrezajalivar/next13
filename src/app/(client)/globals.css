@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .singleCardPost {
+    @apply bg-red-200 rounded min-h-[300px] text-center p-3;
+  }
+  .btnMore {
+    @apply w-1/5  rounded min-h-[40px] text-center border-2 border-green-700 border-solid border-opacity-70 mt-6 shadow-md bg-green-500 	
+    text-white block w-full transition;
+  }
+  .btnMore:hover {
+    @apply bg-green-900 shadow-xl scale-[1.01] transition;
+  }
+}

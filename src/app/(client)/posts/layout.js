@@ -6,6 +6,8 @@ export const metadata = {
 
 export default function LayoutPost({ children }) {
   return (
-     <> {children}</>  
+     <>
+   
+      {children}</>  
   )
 }
