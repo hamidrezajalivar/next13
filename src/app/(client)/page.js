@@ -2,8 +2,6 @@
 import Image from "next/image";
 
 
-import Footer from "../../../components/Footer";
-import CardBlog from "../../../components/CardBlog";
 import axios from "axios";
 import Link from "next/link";
 import Pagination from "@mui/material/Pagination";
@@ -49,8 +47,8 @@ const Home = async () => {
           color="primary"
         /> */}
       </div>
-      <CardBlog />
-      <Footer />
+
+ 
     </>
   );
 };

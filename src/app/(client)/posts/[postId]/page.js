@@ -2,6 +2,9 @@ import axios from "axios";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import BtnComponent from "../../clientComponent/BtnComponent";
+import { Suspense } from "react";
+import Comments from "../../clientComponent/Comments";
+
 export const dynamicParams = true;
 export async function generateMetadata({ params }) {
   const post = await fecthSinglePost(params.postId);
@@ -9,8 +12,8 @@ export async function generateMetadata({ params }) {
 }
 async function fecthSinglePost(postId) {
   const { data } = await axios.get(`http://localhost:3001/posts/${postId}`, {
-    // cache: "force-cache",
-    next: { revalidate: 60 },
+    cache: "force-cache",
+    // next: { revalidate: 60 },
   });
   console.log(data);
   return data;
@@ -44,6 +47,28 @@ const SinglePost = async ({ params }) => {
         {" "}
         <BtnComponent />
       </div>
+
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
+      <Suspense fallback={<p>loading</p>}>
+        <Comments />
+      </Suspense>
     </>
   );
 };
