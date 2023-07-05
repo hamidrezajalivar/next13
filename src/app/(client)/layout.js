@@ -1,7 +1,8 @@
-import Navbar from "./clientComponent/main/Navbar";
+import Header from "./clientComponent/main/header/Header";
 import Footer from "./clientComponent/main/Footer";
 import "./globals.css";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import localFont from "next/font/local";
 
 export const metadata = {
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
     >
       <head></head>
       <body className="bg-myCustomBgBody h-screen p-0 m-0 overflow-x-hidden ">
-        <Navbar />
+        <Header />
         {children}
         <Footer />
       </body>
