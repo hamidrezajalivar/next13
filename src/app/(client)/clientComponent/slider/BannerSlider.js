@@ -1,5 +1,12 @@
+
 import Slider from "react-slick";
-const BannerSlider = () => {
+import Link from "next/link";
+import Image from "next/image";
+import axios from "axios";
+
+const BannerSlider = async () => {
+  const bannerData = await fecthData();
+
   var settings = {
     dots: true,
     infinite: true,
@@ -7,27 +14,27 @@ const BannerSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  
   return (
-    <Slider {...settings} style={{ margin: "192px" }}>
-      <div>
-        <h3>1</h3>
+    <Slider {...settings} className="sliderHeader">
+      {bannerData.map((item) => (
+        <div key={item.id}>
+        <Link href="/">
+          <div className="rounded overflow-hidden">
+            <Image src={item.imageUrl}  alt="" width="500" height="160"      style={{ width: '100%' }} />
+
+          </div>
+        </Link>
       </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+  
+      ))}
+      
+      
     </Slider>
   );
 };
 export default BannerSlider;
+async function fecthData() {
+  const { data } = await axios.get("http://localhost:3001/banner");
+  return data;
+}

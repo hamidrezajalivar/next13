@@ -6,6 +6,8 @@ import axios from "axios";
 import Link from "next/link";
 
 import { useState } from "react";
+import ChildBanner from './clientComponent/banner/ChildBanner';
+import CategorySlider from './clientComponent/category/CategorySlider';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 export const metadata = {
@@ -17,18 +19,21 @@ const Home = async () => {
 
   return (
     <>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-2 bg-gray-900">
+      <div className="grid grid-cols-5 gap-4 my-10">
+        <div className="col-span-5 sm:col-span-3 ">
           <BannerSlider />
         </div>
-        <div class="col-span-1">
-          <div className="bg-red-900">05</div>
-          <div className="bg-red-500">06</div>
-        </div>
+        <div className="col-span-5 sm:col-span-2">
+
+          <ChildBanner/>
+         </div>
+      </div>
+      <div className="w-full">
+      <CategorySlider/>
       </div>
       <div className="block md:flex justify-center w-full  flex-wrap">
         {postsData.map((post) => (
-          <div className="md:w-1/4  w-full p-5" key={post.id}>
+          <div className="md:w-1/4 w-full p-5" key={post.id}>
             <Link href={`/posts/${post.id}`}>
               <div className="singleCardPost ">
                 <Image src={post.imageUrl} alt="" width="500" height="160" />
