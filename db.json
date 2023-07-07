@@ -10,6 +10,60 @@
       "imageUrl": "/img/slider/22.jpg"
     }
   ],
+  "product": [
+    {
+      "id": 1,
+      "imageUrl": "/img/product/p3.png",
+      "title":"product 1",
+      "rate":"3",
+      "price":"100"
+    },
+    {
+      "id": 2,
+      "imageUrl": "/img/product/p1.png",
+      "title":"product 2",
+      "rate":"1",
+      "price":"100"
+    },
+    {
+      "id": 3,
+      "imageUrl": "/img/product/p3.png",
+      "title":"product 3",
+      "rate":"5",
+      "price":"150"
+    },
+    {
+      "id": 4,
+      "imageUrl": "/img/product/p2.png",
+      "title":"product 4",
+      "rate":"2",
+      "price":"300"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/img/product/p1.png",
+      "title":"product 5",
+      "rate":"3",
+      "price":"600"
+    },
+    {
+      "id": 6,
+      "imageUrl": "/img/product/p2.png",
+      "title":"product 6",
+      "rate":"3",
+      "price":"100"
+    },
+    {
+      "id": 7,
+      "imageUrl": "/img/product/p4.png",
+      "title":"product 7",
+      "rate":"5",
+      "price":"320"
+    }
+  
+
+ 
+  ],
   "category":[
     {
       "id": 1,

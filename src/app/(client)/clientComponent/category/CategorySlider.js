@@ -40,8 +40,8 @@ const CategorySlider = async () => {
         <div key={item.id} className="p-2">
         <Link href="/">
           <div className="grid grid-cols-3 rounded  gap-5 bg-gray-500 items-center p-1">
-          <div className="col-span-1 ">
-          <Image src={item.imageUrl}  alt="" width="500" height="160" />
+          <div className="col-span-1 items pr-2">
+          <Image src={item.imageUrl}  alt="" width="500" height="160" className="rounded-3xl bg-white "/>
           </div>
           <div className="col-span-2 block">
             <h5>{item.title}</h5>

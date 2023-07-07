@@ -1,26 +1,31 @@
 .sliderHeader {
   .slick-prev {
     left: 15px;
-  
-
   }
   .slick-next {
     right: 20px;
-  
- }
-  .slick-arrow{
+  }
+  .slick-arrow {
     z-index: 1;
     &:before {
       font-size: 30px !important;
-        }   
+    }
   }
 }
-.category{
-  .slick-slide img {
+.category {
+  .slick-slide .items {
+    
     display: block;
     border-right: 0.1em solid #fff;
-  
+  }
 }
-}  
-
-  
+nav {
+  .item{
+ 
+    border-right: 0.1em solid #fff;
+  }
+  .itemDark{
+   padding-right:10px;
+    border-right: 0.1em solid #666;
+  }
+}

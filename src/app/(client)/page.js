@@ -4,7 +4,7 @@ import Image from "next/image";
 import BannerSlider from "./clientComponent/slider/BannerSlider";
 import axios from "axios";
 import Link from "next/link";
-
+import ProductSlider from './clientComponent/product/ProductSlider';
 import { useState } from "react";
 import ChildBanner from './clientComponent/banner/ChildBanner';
 import CategorySlider from './clientComponent/category/CategorySlider';
@@ -30,6 +30,9 @@ const Home = async () => {
       </div>
       <div className="w-full">
       <CategorySlider/>
+      </div>
+      <div className="w-full">
+      <ProductSlider/>
       </div>
       <div className="block md:flex justify-center w-full  flex-wrap">
         {postsData.map((post) => (
@@ -62,3 +65,6 @@ async function fecthPosts() {
   const { data } = await axios.get("http://localhost:3001/posts");
   return data;
 }
+
+
+// json-server --watch db.json --port 8000

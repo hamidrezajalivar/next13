@@ -20,6 +20,7 @@ module.exports = {
       },
       colors: {
         myCustomBgBody: 'rgb(132, 158, 93)',
+        customHover:"#f68b1e"
       },
 
     },
