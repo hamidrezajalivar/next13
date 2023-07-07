@@ -4,16 +4,16 @@ const Product=({item})=>{
 return (
     <>
 
-<div className="max-w-2xl mx-auto">
+<div className="max-w-2xl mx-auto p-2 ">
 
 
-	<div className="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+	<div className="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 ">
 		<Link href="/">
-			<Image className="rounded-t-lg p-8" src={item.imageUrl} alt={item.title} width="400" height="400"/>
+			<Image className="rounded-t-lg p-8" src={item.imageUrl} alt={item.title} width="300" height="300"/>
         </Link>
 			<div className="px-5 pb-5">
 				<Link href="/">
-					<h3 className="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">{item.title}</h3>
+					<h3 className="text-gray-900 font-semibold text-xl tracking-tight dark:text-white gap-2.5">{item.title}</h3>
 				</Link>
 				<div className="flex items-center mt-2.5 mb-5">
 					<svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
@@ -58,11 +58,7 @@ return (
 	</div>
 
 
-	<p className="mt-5">This card component is part of a larger, open-source library of Tailwind CSS components. Learn
-		more
-		by going to the official <Link className="text-blue-600 hover:underline"
-			href="/" target="_blank">Flowbite Documentation</Link>.
-	</p>
+	
 </div>
     </>
 )

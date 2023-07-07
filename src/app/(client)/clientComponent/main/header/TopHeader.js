@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const TopHeader = () => {
     return (
-        <div className="w-full bg-green-900 h-12 flex items-center topMenu px-6">
+        <div className="w-full bg-green-900 h-12 md:flex items-center topMenu px-6 hidden ">
             <div className=" grid grid-cols-10 w-full  text-white text-sm md:max-w-custom  mx-auto">
                 <div className="col-span-7 flex ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">

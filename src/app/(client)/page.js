@@ -8,6 +8,7 @@ import ProductSlider from './clientComponent/product/ProductSlider';
 import { useState } from "react";
 import ChildBanner from './clientComponent/banner/ChildBanner';
 import CategorySlider from './clientComponent/category/CategorySlider';
+import SideBar from './clientComponent/sidebar/SideBar';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 export const metadata = {
@@ -31,9 +32,18 @@ const Home = async () => {
       <div className="w-full">
       <CategorySlider/>
       </div>
-      <div className="w-full">
-      <ProductSlider/>
-      </div>
+    
+      <div className="grid grid-cols-5 gap-4 my-10  ">
+    
+      <div className="col-span-5 md:col-span-1  ">
+        <SideBar/>
+        </div>
+        <div className="col-span-5 md:col-span-4   ">
+        <ProductSlider/>
+        </div>
+       
+     
+        </div>
       <div className="block md:flex justify-center w-full  flex-wrap">
         {postsData.map((post) => (
           <div className="md:w-1/4 w-full p-5" key={post.id}>
@@ -50,12 +60,7 @@ const Home = async () => {
           </div>
         ))}
 
-        {/* <Pagination
-          count={postsData.length}
-          page={1}
-          rowsPerPage={10}
-          color="primary"
-        /> */}
+      
       </div>
     </>
   );
