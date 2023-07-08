@@ -4,7 +4,7 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import localFont from "next/font/local";
-
+import { ReduxProvider } from "./redux/provider";
 import "./styles/main.scss";
 export const metadata = {
   title: "Create Next App",
@@ -46,11 +46,11 @@ export default function RootLayout({ children }) {
     >
       <head></head>
       <body className="bg-myCustomBgBody h-screen p-0 m-0 overflow-x-hidden ">
-        <Header />
-        <div className=" max-w-xs md:max-w-custom  mx-auto">
-        {children}
-        </div>
-        <Footer />
+        <ReduxProvider>
+          <Header />
+          <div className=" max-w-xs md:max-w-custom  mx-auto">{children}</div>
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

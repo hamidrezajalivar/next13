@@ -4,11 +4,8 @@ import Image from "next/image";
 import BannerSlider from "./clientComponent/slider/BannerSlider";
 import axios from "axios";
 import Link from "next/link";
-import ProductSlider from './clientComponent/product/ProductSlider';
+
 import { useState } from "react";
-import ChildBanner from './clientComponent/banner/ChildBanner';
-import CategorySlider from './clientComponent/category/CategorySlider';
-import SideBar from './clientComponent/sidebar/SideBar';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 export const metadata = {
@@ -20,33 +17,18 @@ const Home = async () => {
 
   return (
     <>
-      <div className="grid grid-cols-5 gap-4 my-10">
-        <div className="col-span-5 sm:col-span-3 ">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-2 bg-gray-900">
           <BannerSlider />
         </div>
-        <div className="col-span-5 sm:col-span-2">
-
-          <ChildBanner/>
-         </div>
+        <div class="col-span-1">
+          <div className="bg-red-900">05</div>
+          <div className="bg-red-500">06</div>
+        </div>
       </div>
-      <div className="w-full">
-      <CategorySlider/>
-      </div>
-    
-      <div className="grid grid-cols-5 gap-4 my-10  ">
-    
-      <div className="col-span-5 md:col-span-1  ">
-        <SideBar/>
-        </div>
-        <div className="col-span-5 md:col-span-4   ">
-        <ProductSlider/>
-        </div>
-       
-     
-        </div>
       <div className="block md:flex justify-center w-full  flex-wrap">
         {postsData.map((post) => (
-          <div className="md:w-1/4 w-full p-5" key={post.id}>
+          <div className="md:w-1/4  w-full p-5" key={post.id}>
             <Link href={`/posts/${post.id}`}>
               <div className="singleCardPost ">
                 <Image src={post.imageUrl} alt="" width="500" height="160" />
@@ -60,7 +42,12 @@ const Home = async () => {
           </div>
         ))}
 
-      
+        {/* <Pagination
+          count={postsData.length}
+          page={1}
+          rowsPerPage={10}
+          color="primary"
+        /> */}
       </div>
     </>
   );
@@ -70,6 +57,3 @@ async function fecthPosts() {
   const { data } = await axios.get("http://localhost:3001/posts");
   return data;
 }
-
-
-// json-server --watch db.json --port 8000
