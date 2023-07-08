@@ -4,7 +4,10 @@ import Image from "next/image";
 import BannerSlider from "./clientComponent/slider/BannerSlider";
 import axios from "axios";
 import Link from "next/link";
-
+import ChildBanner from "./clientComponent/banner/ChildBanner";
+import CategorySlider from "./clientComponent/category/CategorySlider";
+import SideBar from "./clientComponent/sidebar/SideBar";
+import ProductSlider from "./clientComponent/product/ProductSlider";
 import { useState } from "react";
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
@@ -17,13 +20,24 @@ const Home = async () => {
 
   return (
     <>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-2 bg-gray-900">
+      <div className="grid grid-cols-5 gap-4 my-10">
+        <div className="col-span-5 sm:col-span-3 ">
           <BannerSlider />
         </div>
-        <div class="col-span-1">
-          <div className="bg-red-900">05</div>
-          <div className="bg-red-500">06</div>
+        <div className="col-span-5 sm:col-span-2">
+          <ChildBanner />
+        </div>
+      </div>
+      <div className="w-full">
+        <CategorySlider />
+      </div>
+
+      <div className="grid grid-cols-5 gap-4 my-10  ">
+        <div className="col-span-5 md:col-span-1  ">
+          <SideBar />
+        </div>
+        <div className="col-span-5 md:col-span-4   ">
+          <ProductSlider />
         </div>
       </div>
       <div className="block md:flex justify-center w-full  flex-wrap">
