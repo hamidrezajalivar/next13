@@ -7,11 +7,11 @@ import Image from "next/image";
 export default function Header() {
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900 ">
         <TopHeader />
-        <div className="md:max-w-custom  mx-auto">
+        <div className="md:max-w-custom px-8 md:px-0 py-4 mx:py-0 mx-auto">
           <div className="grid grid-cols-12 w-full  text-white text-sm  ">
-            <div className="col-span-12 sm:col-span-2   ">
+            <div className="col-span-10 sm:col-span-2   ">
               <Link href="/" className="flex items-center w-full h-full">
                 <Image
                   src="/img/logo.svg"
@@ -21,6 +21,30 @@ export default function Header() {
                   height="500"
                 />
               </Link>
+            </div>
+            <div className="col-span-2   md:hidden ">
+              <button
+                data-collapse-toggle="mega-menu-icons"
+                type="button"
+                className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="mega-menu-icons"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  aria-hidden="true"
+                  className="w-14 h-14"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </button>
             </div>
             <div className="col-span-12 sm:col-span-10  ">
               <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -40,10 +64,10 @@ border-gray-300"
                   <SearchComponent />
                 </div>
                 <div className="w-full md:w-1/5">
-                  <div className="flex justify-end md:order-2">
+                  <div className="flex justify-between md:justify-end md:order-2 mt-5 md:mt-0">
                     <Link
                       href="/"
-                      className="text-white flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                      className="text-white w-1/2 flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +75,7 @@ border-gray-300"
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="currentColor"
-                        className="w-6 h-6 mr-1"
+                        className="w-10 h-10 mr-1"
                       >
                         <path
                           strokeLinecap="round"
@@ -63,7 +87,7 @@ border-gray-300"
                     </Link>
                     <Link
                       href="/"
-                      className="text-white flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                      className="text-white w-1/2 flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -81,53 +105,8 @@ border-gray-300"
                       </svg>
                       <span> Basket</span>
                     </Link>
-                    <button
-                      data-collapse-toggle="mega-menu-icons"
-                      type="button"
-                      className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                      aria-controls="mega-menu-icons"
-                      aria-expanded="false"
-                    >
-                      <span className="sr-only">Open main menu</span>
-                      <svg
-                        aria-hidden="true"
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </button>
                   </div>
                 </div>
-
-                {/* <button
-                data-collapse-toggle="mega-menu-icons"
-                type="button"
-                className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="mega-menu-icons"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  aria-hidden="true"
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button> */}
               </div>
             </div>
           </div>
