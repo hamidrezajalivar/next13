@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 ">
+      <nav className="bg-bgHeader border-gray-200 dark:bg-gray-900 ">
         <TopHeader />
         <div className="md:max-w-custom px-8 md:px-0 py-4 mx:py-0 mx-auto">
           <div className="grid grid-cols-12 w-full  text-white text-sm  ">

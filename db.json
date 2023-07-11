@@ -67,50 +67,38 @@
   "category":[
     {
       "id": 1,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/1.png",
       "title": "First category",
       "body":"lorem ipsum dolor sit"
     },
     {
       "id": 2,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/2.png",
       "title": "Second category",
       "body":"lorem ipsum dolor sit"
     },
     {
       "id": 3,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/3.png",
       "title": "third category",
       "body":"lorem ipsum dolor sit"
     },
     {
       "id": 4,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/4.png",
       "title": "four category",
       "body":"lorem ipsum dolor sit"
     },
     {
       "id": 5,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/5.png",
       "title": "five category",
       "body":"lorem ipsum dolor sit"
     },
     {
       "id": 6,
-      "imageUrl": "/img/gozaresh.png",
+      "imageUrl": "/img/category/6.png",
       "title": "six category",
-      "body":"lorem ipsum dolor sit"
-    },
-    {
-      "id": 7,
-      "imageUrl": "/img/gozaresh.png",
-      "title": "seven category",
-      "body":"lorem ipsum dolor sit"
-    },
-    {
-      "id": 8,
-      "imageUrl": "/img/gozaresh.png",
-      "title": "eight category",
       "body":"lorem ipsum dolor sit"
     }
   ],

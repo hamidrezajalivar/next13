@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       maxWidth: {
         'custom': '1300px',
+        'imageCategory':'60px'
       },  
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -19,8 +20,9 @@ module.exports = {
         sans:['var(--font-kanit)']
       },
       colors: {
-        myCustomBgBody: 'rgb(132, 158, 93)',
-        customHover:"#f68b1e"
+        myCustomBgBody: '#F3F9FB',
+        customHover:"#ffeed7",
+        bgHeader:"#ffeed7"
       },
 
     },

@@ -40,7 +40,7 @@ const Home = async () => {
           <ProductSlider />
         </div>
       </div>
-      <div className="block md:flex justify-center w-full  flex-wrap">
+      {/* <div className="block md:flex justify-center w-full  flex-wrap">
         {postsData.map((post) => (
           <div className="md:w-1/4  w-full p-5" key={post.id}>
             <Link href={`/posts/${post.id}`}>
@@ -54,15 +54,10 @@ const Home = async () => {
               </div>
             </Link>
           </div>
-        ))}
+        ))} */}
 
-        {/* <Pagination
-          count={postsData.length}
-          page={1}
-          rowsPerPage={10}
-          color="primary"
-        /> */}
-      </div>
+{/*   
+      </div> */}
     </>
   );
 };

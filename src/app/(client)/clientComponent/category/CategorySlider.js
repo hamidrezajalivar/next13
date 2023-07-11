@@ -1,8 +1,7 @@
+"use client";
 import Slider from "react-slick";
-import Link from "next/link";
-import Image from "next/image";
 import axios from "axios";
-
+import CategoryBox from "./CategoryBox";
 const CategorySlider = async () => {
   const categorys = await fecthData();
 
@@ -10,7 +9,7 @@ const CategorySlider = async () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
         {
@@ -38,17 +37,7 @@ const CategorySlider = async () => {
     <Slider {...settings}  className="category">
       {categorys.map((item) => (
         <div key={item.id} className="p-2">
-        <Link href="/">
-          <div className="grid grid-cols-3 rounded  gap-5 bg-gray-500 items-center p-1">
-          <div className="col-span-1 items pr-2">
-          <Image src={item.imageUrl}  alt="" width="500" height="160" className="rounded-3xl bg-white "/>
-          </div>
-          <div className="col-span-2 block">
-            <h5>{item.title}</h5>
-            <span className="text-xs">{item.body}</span>
-          </div>
-          </div>
-        </Link>
+        <CategoryBox item={item}/>
       </div>
   
       ))}
